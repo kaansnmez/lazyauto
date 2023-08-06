@@ -216,7 +216,6 @@ All functions is listed below.
     .. code-block:: python
     
         from lazyauto.Eda.eda import pairplot
-        from lightgbm import LGBMRegressor
         from sklearn import datasets
         diab=datasets.load_diabetes(as_frame=True)
         df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
@@ -241,6 +240,7 @@ All functions is listed below.
     
         from lazyauto.Eda.eda import outlier_dedection
         from sklearn import datasets
+        from lightgbm import LGBMRegressor
         diab=datasets.load_diabetes(as_frame=True)
         df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
          
