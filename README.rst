@@ -112,7 +112,7 @@ All functions is listed below.
     
     Result:
     
-    .. image:: doc_image/describe_object.png
+    .. image:: doc_image/describe_object.PNG
     
     * describes
     
@@ -126,7 +126,7 @@ All functions is listed below.
     
     Result:
     
-    .. image:: doc_image/describe.png
+    .. image:: doc_image/describe.PNG
     
     * unique_val
     
@@ -144,7 +144,7 @@ All functions is listed below.
     
     Result:
     
-    .. image:: doc_image/unique_val.png
+    .. image:: doc_image/unique_val.PNG
     
 
     * dedect_features
@@ -188,7 +188,7 @@ All functions is listed below.
     
     Result:
     
-    .. image:: doc_image/corr.png
+    .. image:: doc_image/corr.PNG
     
     
     * cat_plot
@@ -206,7 +206,7 @@ All functions is listed below.
      
     Result:
      
-    .. image:: doc_image/cat_plot.png
+    .. image:: doc_image/cat_plot.PNG
     
     
     * pairplot
@@ -216,6 +216,7 @@ All functions is listed below.
     .. code-block:: python
     
         from lazyauto.Eda.eda import pairplot
+        from lightgbm import LGBMRegressor
         from sklearn import datasets
         diab=datasets.load_diabetes(as_frame=True)
         df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
@@ -224,7 +225,7 @@ All functions is listed below.
      
     Result:
      
-    .. image:: doc_image/pairplot.png
+    .. image:: doc_image/pairplot.PNG
     
     
     
@@ -247,9 +248,9 @@ All functions is listed below.
      
     Result:
      
-    .. image:: doc_image/isolation_pca.png
+    .. image:: doc_image/isolation_pca.PNG
     
-    .. image:: doc_image/isolation_ds.png
+    .. image:: doc_image/isolation_ds.PNG
     
 
 
