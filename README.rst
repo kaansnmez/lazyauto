@@ -269,9 +269,9 @@ Includes pre-processing functions.
         outlier=outlier_dedection(df,target='target',model=LGBMRegressor(),contaminations=[0.1],graph=True)
         dropped_df=drop_outliers(df,outlier)
      
-     Results:   
+    Results:   
     
-     .. code-block:: python
+    .. code-block:: python
      
         >>>
         Shape:  442
