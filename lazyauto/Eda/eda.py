@@ -236,11 +236,11 @@ def cat_plot(df,target,title='',drop=[]):
         ax.spines['bottom'].set_lw(1)
         axes[i,1].set_title(var_name)
 
-    plt.subplots_adjust(bottom=0.15, wspace=0.2)
+    plt.subplots_adjust(bottom=0.3, wspace=0.2)
     plt.show()
    
     
-def pairplot(df,title,n_cols=3,drop=[],render_local='False'):
+def pairplot(df,title,n_cols=3,drop=[],render_local=False):
     """
     Draws the distrubiton graph of continuous values ​​with box plot.# noqa:E501
 
@@ -248,15 +248,17 @@ def pairplot(df,title,n_cols=3,drop=[],render_local='False'):
     Parameters
     ----------
     df : DataFrame
-    title : TYPE
+    title : String
         Figure Title.
     n_cols : Int, optional
         Subplots column number. The default is 3.
-    drop : TYPE, optional
-       If you want drop any feature , you have to defined list. The default is [].# noqa:E501
+    drop : List, optional
+       If you want drop any feature , you have to defined list. The default is [].
+    render_local: Bool
+        Plotly can't run the local IDE. If change True,render open the default browser.
 
     """
-    if render_local=='True': io.renderers.default = 'browser'
+    if render_local==True: io.renderers.default = 'browser'
     date_cols,num_but_cat,cat_col,cat_but_num,num_col=dedect_features(df,20,30)
     colors_d = '#E48F72'
     cols=df[num_col].columns.drop(drop).to_list()
