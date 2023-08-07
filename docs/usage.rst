@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use lazyauto in a project::
+You can find everything in github page:
 
-    import lazyauto
+https://github.com/kaansnmez/lazyauto
