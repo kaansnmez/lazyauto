@@ -10,7 +10,7 @@ import random
 from time import sleep
 import plotly.io as io
 io.templates.default = 'plotly_dark'
-io.renderers.default = 'browser'
+
 
 
 def show(df, caption=""):
@@ -240,7 +240,7 @@ def cat_plot(df,target,title='',drop=[]):
     plt.show()
    
     
-def pairplot(df,title,n_cols=3,drop=[]):
+def pairplot(df,title,n_cols=3,drop=[],render_local='False'):
     """
     Draws the distrubiton graph of continuous values ​​with box plot.# noqa:E501
 
@@ -256,6 +256,7 @@ def pairplot(df,title,n_cols=3,drop=[]):
        If you want drop any feature , you have to defined list. The default is [].# noqa:E501
 
     """
+    if render_local=='True': io.renderers.default = 'browser'
     date_cols,num_but_cat,cat_col,cat_but_num,num_col=dedect_features(df,20,30)
     colors_d = '#E48F72'
     cols=df[num_col].columns.drop(drop).to_list()
