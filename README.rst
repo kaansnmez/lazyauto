@@ -26,13 +26,16 @@ Available as a `PyPI <https://pypi.python.org/pypi/lazyauto>`_ package:
 
 Usage
 *********
-#. EDA
+EDA
 ======
 This library have a lot of function and some functions have html based looking great for  using on JupiterNotebook.
 All functions is listed below.
 
-    * show
+========    
+show
+========
     
+
     Helper function to set dataframe presentation style Html Based like ``JupiterNotebook``.
     
     .. code-block:: python
@@ -46,8 +49,9 @@ All functions is listed below.
     
     .. image:: doc_image/show.png
     
-    
-    * skewness
+===========    
+skewness
+===========
     
     This function evaluates whether the features in the given dataframe are skewed and returns a list.
     
@@ -67,9 +71,10 @@ All functions is listed below.
         >>> skw 
         ['bmi', 's3', 's4']
         
-    
-    * null_val
-    
+=========    
+null_val
+=========
+
     This function returns a list of null values as Dataframe.
     Because easy to use with ``show`` function in ``JupyterNotebook``
     
@@ -99,9 +104,11 @@ All functions is listed below.
         s5      0
         s6      0
         target  0
-    
-    * describe_object
-    
+
+================    
+describe_object
+================    
+
     This function returns the describe function for features other than continues variable.
     
     .. code-block:: python
@@ -113,9 +120,11 @@ All functions is listed below.
     Result:
     
     .. image:: doc_image/describe_object.PNG
-    
-    * describes
-    
+
+==============    
+describes
+==============
+
     This function returns the describe function for features other than categoric variable.    
     
     .. code-block:: python
@@ -127,9 +136,11 @@ All functions is listed below.
     Result:
     
     .. image:: doc_image/describe.PNG
-    
-    * unique_val
-    
+
+==============    
+unique_val
+==============
+
     This function finds unique data that is different in categoric variables between two dataframes. 
     It returns data that is in dataframe 2 but not in dataframe 1.
     This function return 2 values. One is dataframe for display on JupyterNotebook ,Second is dict.
@@ -146,9 +157,10 @@ All functions is listed below.
     
     .. image:: doc_image/unique_val.PNG
     
+===============
+dedect_features
+===============
 
-    * dedect_features
-    
     This function separates data types. And returns them. It takes 3 variables. The first is dataframe, the second is unique val threshold limit for numeric data.
     The third is unique val threshold limit for Categoric variables. 
     These are for extracting features that are numeric but behave like categoric or like categoric but behave like numeric.
@@ -172,9 +184,10 @@ All functions is listed below.
         Categoric Columns:  []
         Categoric But Numeric Columns:  []
         Numeric Columns:  ['age', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6', 'target']
-    
-    * corr
-    
+==========    
+corr
+==========
+
     Plots the edited correlation heatmap.
     
     .. code-block:: python
@@ -190,9 +203,10 @@ All functions is listed below.
     
     .. image:: doc_image/corr.PNG
     
-    
-    * cat_plot
-    
+==========    
+cat_plot
+========== 
+
     Draws Pie Chart and Barplot distributions of categorical data.
     
     .. code-block:: python
@@ -208,9 +222,9 @@ All functions is listed below.
      
     .. image:: doc_image/cat_plot.PNG
     
-    
-    * pairplot
-    
+==========    
+pairplot
+==========    
     Draws Boxplot and Scatterplot distributions of Continues values. Plotly is used. Opens automatically in the default browser on local as well.
     
     .. code-block:: python
@@ -227,9 +241,10 @@ All functions is listed below.
     .. image:: doc_image/pairplot.PNG
     
     
-    
-    * outlier_dedection
-    
+==================    
+outlier_dedection
+==================
+
     Isolation forest is used. For the best comparison based on score, the estimator must be specified. 
     If the Contaminations value is not entered, it returns the Scores of all values by default. 
     In this way, the user can see the scores of all default defined values, make a selection and run it again. 
@@ -250,12 +265,16 @@ All functions is listed below.
     .. image:: doc_image/isolation_pca.PNG
     
     .. image:: doc_image/isolation_ds.PNG
-    
+
+============    
 preperation
-======
+============
+
 Includes pre-processing functions.
-    
-    *drop_outlier
+
+=============
+drop_outlier
+=============
     Drops the object returned from eda.outlier_dedection over its indexes.
     
     .. code-block:: python
@@ -283,7 +302,10 @@ Includes pre-processing functions.
 time_transform
 ======
 Includes feature extraction functions for datetime features.
-    *datetime_simple
+
+================
+datetime_simple
+================
     
     This function create a new features like day,month,year,week ..etc and returning dataframe. 
      
@@ -327,9 +349,11 @@ Includes feature extraction functions for datetime features.
         is_summer    0
         is_autumn    0
         is_winter    0
-        
-    *datetime_ohe
-    
+
+=============        
+datetime_ohe
+=============
+
     This function transforms datetime data into day,month,year etc. with OHE approach.
         
     .. code-block:: python
@@ -373,7 +397,7 @@ Includes feature extraction functions for datetime features.
         [74 rows x 1 columns]
 
 lazy_model_ev 
-======
+===============
 This class has multiple functions and all functions are interconnected. 
 Pipeline performs the final step of model development and hyperparameter optimization for a model that has been built and all preprocessing and extraction parts have been completed. 
 If an estimator is not selected, it selects its best estimator (min score or max score) and automatically runs and transforms the pipeline object for X_test and X_train. 
