@@ -215,7 +215,7 @@ cat_plot
         
         csv=pd.read_csv("data\\House_Rent_Dataset.csv")
         
-        cat_plot(df,target='Price','Distributions')
+        cat_plot(df,target='Price',title='Distributions')
      
     Result:
      
@@ -226,7 +226,7 @@ cat_plot
 ==========    
 pairplot
 ==========    
-    Draws Boxplot and Scatterplot distributions of Continues values. Plotly is used. Opens automatically in the default browser on local as well.
+    Draws Boxplot and Scatterplot distributions of Continues values. Plotly is used. If you change ``render_local`` is True, opens automatically in the default browser on local as well.
     
     .. code-block:: python
     
@@ -235,7 +235,7 @@ pairplot
         diab=datasets.load_diabetes(as_frame=True)
         df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
          
-        pairplot(df,'Distributions')
+        pairplot(df,'Distributions',render_local=False)
      
     Result:
      
