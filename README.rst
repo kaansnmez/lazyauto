@@ -215,7 +215,7 @@ cat_plot
         
         csv=pd.read_csv("data\\House_Rent_Dataset.csv")
         
-        cat_plot(df,target='Price',title='Distributions')
+        cat_plot(csv,target='Price',title='Distributions')
      
     Result:
      
