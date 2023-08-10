@@ -207,20 +207,21 @@ corr
 cat_plot
 ========== 
 
-    Draws Pie Chart and Barplot distributions of categorical data.
+    Draws distributions of categorical data.It can produce more than one figure output according to the number of categorical variables.
     
     .. code-block:: python
     
         from lazyauto.Eda.eda import cat_plot
-        from sklearn import datasets
-        diab=datasets.load_diabetes(as_frame=True)
-        df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
-         
+        
+        csv=pd.read_csv("data\\House_Rent_Dataset.csv")
+
         cat_plot(df,target='target','Distributions')
      
     Result:
      
     .. image:: doc_image/cat_plot.PNG
+    .. image:: doc_image/cat_plot_1.png
+    .. image:: doc_image/cat_plot_2.png
     
 ==========    
 pairplot
