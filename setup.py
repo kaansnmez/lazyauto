@@ -2,7 +2,7 @@
 
 """The setup script."""
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Extension
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -31,14 +31,17 @@ setup(
     description="A python package for analysis and model development.",
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    long_description_content_type="text/markdown",
+    #long_description=readme + '\n\n' + history,
+    long_description='You can find example in my github: '+'https://github.com/kaansnmez/lazyauto',
     include_package_data=True,
-    keywords='lazyauto',
+    keywords=['lazyauto','pipeline','optuna'],
     name='lazyauto',
     packages=find_packages(include=['lazyauto', 'lazyauto.*']),
     test_suite='tests',
+    download_url='https://github.com/user/lazyauto/archive/v_01.tar.gz',
     tests_require=test_requirements,
     url='https://github.com/kaansnmez/lazyauto',
-    version='0.1.0',
+    version='0.2.5',
     zip_safe=False,
 )
