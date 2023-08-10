@@ -214,8 +214,8 @@ cat_plot
         from lazyauto.Eda.eda import cat_plot
         
         csv=pd.read_csv("data\\House_Rent_Dataset.csv")
-
-        cat_plot(df,target='target','Distributions')
+        
+        cat_plot(df,target='Price','Distributions')
      
     Result:
      
