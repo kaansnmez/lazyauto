@@ -316,7 +316,7 @@ datetime_simple
         from lazyauto.Eda.eda import null_vall
         train=pd.read_csv("data/train.csv")
         train['date']=pd.to_datetime(train['date'])
-        train_date=date_time_transform.datetime_simple(train['date'])
+        train_date=datetime_simple(train['date'])
         
     .. code-block:: python
     
@@ -363,7 +363,7 @@ datetime_ohe
         from lazyauto.Eda.eda import null_vall
         train=pd.read_csv("data/train.csv")
         train['date']=pd.to_datetime(train['date'])
-        train_date=date_time_transform.datetime_simple(train['date'])
+        train_date=datetime_ohe(train['date'])
         
     .. code-block:: python
     
