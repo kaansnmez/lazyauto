@@ -208,34 +208,39 @@ cat_plot
 ========== 
 
     Draws distributions of categorical data.It can produce more than one figure output according to the number of categorical variables.
-    
+    ``drop``: You can use it if you want to take out a column.
+
     .. code-block:: python
     
         from lazyauto.Eda.eda import cat_plot
         
         csv=pd.read_csv("data\\House_Rent_Dataset.csv")
 
-        cat_plot(df,target='target','Distributions')
+        cat_plot(df,target='target',drop=[])
      
     Result:
      
-    .. image:: doc_image/cat_plot.PNG
-    .. image:: doc_image/cat_plot_1.png
+    .. image:: doc_image/cat_plot_1.PNG
     .. image:: doc_image/cat_plot_2.png
+    .. image:: doc_image/cat_plot_3.png
     
 ==========    
 pairplot
 ==========    
     Draws Boxplot and Scatterplot distributions of Continues values. Plotly is used. Opens automatically in the default browser on local as well.
     
+    ``render_local`` : If is set True , You must work in local. Graph will open default web browser.
+
+    ``drop``: You can use it if you want to take out a column.
+
     .. code-block:: python
     
         from lazyauto.Eda.eda import pairplot
         from sklearn import datasets
         diab=datasets.load_diabetes(as_frame=True)
-        df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
+        df=pd.DataFrame(diab['frame'])
          
-        pairplot(df,'Distributions')
+        pairplot(df,'Distributions',render_local=False,drop=[])
      
     Result:
      
