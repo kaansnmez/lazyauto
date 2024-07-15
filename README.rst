@@ -211,6 +211,8 @@ cat_plot
 
     ``drop``: You can use it if you want to take out a column.
 
+    ``target``: Column to be predicted.
+
     .. code-block:: python
     
         from lazyauto.Eda.eda import cat_plot
