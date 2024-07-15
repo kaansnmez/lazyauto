@@ -214,8 +214,8 @@ cat_plot
         from lazyauto.Eda.eda import cat_plot
         
         csv=pd.read_csv("data\\House_Rent_Dataset.csv")
-        
-        cat_plot(csv,target='Price',title='Distributions')
+
+        cat_plot(df,target='target','Distributions')
      
     Result:
      
@@ -226,7 +226,7 @@ cat_plot
 ==========    
 pairplot
 ==========    
-    Draws Boxplot and Scatterplot distributions of Continues values. Plotly is used. If you change ``render_local`` is True, opens automatically in the default browser on local as well.
+    Draws Boxplot and Scatterplot distributions of Continues values. Plotly is used. Opens automatically in the default browser on local as well.
     
     .. code-block:: python
     
@@ -235,7 +235,7 @@ pairplot
         diab=datasets.load_diabetes(as_frame=True)
         df=pd.DataFrame(diab['frame'],columns=diab['feature_names']+['target'])
          
-        pairplot(df,'Distributions',render_local=False)
+        pairplot(df,'Distributions')
      
     Result:
      
@@ -316,7 +316,7 @@ datetime_simple
         from lazyauto.Eda.eda import null_vall
         train=pd.read_csv("data/train.csv")
         train['date']=pd.to_datetime(train['date'])
-        train_date=datetime_simple(train['date'])
+        train_date=date_time_transform.datetime_simple(train['date'])
         
     .. code-block:: python
     
@@ -363,7 +363,7 @@ datetime_ohe
         from lazyauto.Eda.eda import null_vall
         train=pd.read_csv("data/train.csv")
         train['date']=pd.to_datetime(train['date'])
-        train_date=datetime_ohe(train['date'])
+        train_date=date_time_transform.datetime_simple(train['date'])
         
     .. code-block:: python
     

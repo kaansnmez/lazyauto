@@ -42,6 +42,6 @@ setup(
     download_url='https://github.com/user/lazyauto/archive/v_01.tar.gz',
     tests_require=test_requirements,
     url='https://github.com/kaansnmez/lazyauto',
-    version='0.2.5',
+    version='1.0.6',
     zip_safe=False,
 )
